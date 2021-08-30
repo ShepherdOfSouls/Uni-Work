@@ -1,0 +1,10 @@
+package lab6;
+
+public interface PriorityQueue {
+	public void insert(Integer key, Object value);
+	public Object removeMin();
+	public Object min();
+	public int size();
+	public boolean isEmpty();
+
+}

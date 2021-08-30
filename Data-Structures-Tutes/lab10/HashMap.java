@@ -1,0 +1,18 @@
+package lab10;
+import java.util.List;
+
+public interface HashMap {
+public int size();
+
+public boolean isEmpty();
+
+public Object get(Object key);
+
+public void put(Object key, Object value);
+
+public Object remove(Object key);
+
+public List<Object> keys();
+
+public List<Object> values();
+}
