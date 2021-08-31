@@ -73,7 +73,7 @@ public class SecretMessages {
 			if (keyboard.hasNextInt())
 			{
 			int choice = keyboard.nextInt();
-			
+			keyboard.close();
 			if (choice > 0 && choice < 6)
 			{
 				return choice;
@@ -87,6 +87,7 @@ public class SecretMessages {
 			
 			else
 			{
+				keyboard.close();
 				return -1;
 			}
 			
@@ -106,6 +107,7 @@ public class SecretMessages {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Enter a message to encrypt: ");
 		String message = keyboard.nextLine();
+		keyboard.close();
 		System.out.println(e.encryptString(message));
 	}
 	
@@ -121,6 +123,7 @@ public class SecretMessages {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Enter a message to decrypt: ");
 		String message = keyboard.nextLine();
+		keyboard.close();
 		System.out.println(e.decryptString(message));
 	}
 	
@@ -136,6 +139,7 @@ public class SecretMessages {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Enter a new key: ");
 		String newKey = keyboard.nextLine();
+		keyboard.close();
 		e.setKey(newKey);
 		
 		if (e.setKey(newKey))

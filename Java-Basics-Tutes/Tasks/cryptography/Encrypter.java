@@ -30,7 +30,7 @@ public class Encrypter {
 			this.key = "abcdefghijklmnopqrstuvwxyz";
 		}
 		
-		removeSpaces = excludeSpaces;
+		this.removeSpaces = excludeSpaces;
 	}
 	
 	/**
@@ -40,9 +40,7 @@ public class Encrypter {
 	 */
 	public String getKey()
 	{
-		
-		
-		return key;
+		return this.key;
 	}
 	
 	/**
@@ -53,8 +51,7 @@ public class Encrypter {
 	 */
 	public boolean isRemovingSpaces()
 	{
-				
-		return removeSpaces; 
+		return this.removeSpaces; 
 	}
 	
 	
@@ -114,16 +111,16 @@ public class Encrypter {
 			return false;
 		}
 		
-		String lowerCase = key.toLowerCase();
+		//String lowerCase = key.toLowerCase();
 		
 		for(int i = 0; i < key.length(); i++)
 		{
-			if (Character.isUpperCase(key.charAt(i)))
+			/*if (Character.isUpperCase(key.charAt(i)))
 			{
 				return false;
 			}
-			
-			int position = lowerCase.charAt(i) - 'a';
+			*/
+			int position = key.charAt(i) - 'a';
 			
 			if (position < 0 || position > 25)
 			{
