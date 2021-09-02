@@ -18,15 +18,10 @@ public class Encrypter {
 	 * @param excludeSpaces - if true, indicates that the encrypter should remove spaces when encrypting.
 	 * if false, the encrypter does not remove spaces.
 	 */
-	public Encrypter(String key, boolean excludeSpaces)
-	{
-		
-		if(isKeyValid(key))
-		{
+	public Encrypter(String key, boolean excludeSpaces) {
+		if(isKeyValid(key)) {
 			this.key = key;
-		}
-		else if(!isKeyValid(key))
-		{
+		} else if(!isKeyValid(key)) {
 			this.key = "abcdefghijklmnopqrstuvwxyz";
 		}
 		
@@ -38,8 +33,7 @@ public class Encrypter {
 	 * 
 	 * @return - the 26 character String of lower case letters representing the key
 	 */
-	public String getKey()
-	{
+	public String getKey() {
 		return this.key;
 	}
 	
@@ -49,8 +43,7 @@ public class Encrypter {
 	 * 
 	 * @return true if the encrypter is removing spaces, false otherwise
 	 */
-	public boolean isRemovingSpaces()
-	{
+	public boolean isRemovingSpaces() {
 		return this.removeSpaces; 
 	}
 	
@@ -62,9 +55,7 @@ public class Encrypter {
 	 * @param removeSpaces - true if the encrypter should remove spaces, 
 	 * false if the encrypter should not remove spaces
 	 */
-	public void setSpaceRemoval(boolean removeSpaces)
-	{
-		
+	public void setSpaceRemoval(boolean removeSpaces) {
 		this.removeSpaces = removeSpaces;
 	}
 	
@@ -79,15 +70,11 @@ public class Encrypter {
 	 * 
 	 * @return - true if the key was changed, false if the key was not changed
 	 */
-	public boolean setKey(String newKey)
-	{
+	public boolean setKey(String newKey) {
 		boolean valid = true;
-		if (isKeyValid(newKey))
-		{
+		if (isKeyValid(newKey)) {
 			this.key = newKey;
-		}
-		else if(!isKeyValid(newKey))
-		{
+		} else if(!isKeyValid(newKey)) {
 			valid = false;
 		}
 		
@@ -101,41 +88,23 @@ public class Encrypter {
 	 * @param key - the String to check (*may assume this is not null*)
 	 * @return true if the String is a valid key, false otherwise
 	 */
-	public static boolean isKeyValid(String key)
-	{
-		
+	public static boolean isKeyValid(String key) {
 		boolean[] checker = new boolean[26];
 		
-		if(key.length() != 26)
-		{
+		if(key.length() != 26) {
 			return false;
 		}
 		
-		//String lowerCase = key.toLowerCase();
-		
-		for(int i = 0; i < key.length(); i++)
-		{
-			/*if (Character.isUpperCase(key.charAt(i)))
-			{
-				return false;
-			}
-			*/
+		for(int i = 0; i < key.length(); i++) {
 			int position = key.charAt(i) - 'a';
 			
-			if (position < 0 || position > 25)
-			{
+			if (position < 0 || position > 25) {
 				return false;
-			}
-			else if (!checker[position])
-			{
+			} else if (!checker[position]) {
 				checker[position] = true;
-			}
-			else if (checker[position])
-			{
+			} else if (checker[position]) {
 				return false;
 			}
-			
-			
 		}
 		
 		return true; 
@@ -150,11 +119,9 @@ public class Encrypter {
 	 * @return - the same character, if the input character is not a letter
 	 * - an encrypted version of the input character if it is a letter. 
 	 */
-	public char encryptCharacter(char characterToEncrypt)
-	{
+	public char encryptCharacter(char characterToEncrypt) {
 		
-		if(!Character.isLetter(characterToEncrypt))
-		{
+		if(!Character.isLetter(characterToEncrypt)) {
 			return characterToEncrypt;
 		}
 		
@@ -162,16 +129,11 @@ public class Encrypter {
 		int position = lowerCase -'a';
 		char returnChar = key.charAt(position);
 		
-		if(Character.isUpperCase(characterToEncrypt))
-		{
+		if(Character.isUpperCase(characterToEncrypt)) {
 			return Character.toUpperCase(returnChar);
-		}
-		else
-		{
+		} else {
 			return returnChar;
 		}
-		
-		
 	}
 	
 	/**
@@ -183,35 +145,26 @@ public class Encrypter {
 	 * @return - the same character, if the input character is not a letter
 	 * - a decrypted version of the input character if it is a letter. 
 	 */
-	public char decryptCharacter(char characterToDecrypt)
-	{
+	public char decryptCharacter(char characterToDecrypt) {
 		
-		if(!Character.isLetter(characterToDecrypt))
-		{
+		if(!Character.isLetter(characterToDecrypt)) {
 			return characterToDecrypt;
 		}
 		
 		char lowerCase = Character.toLowerCase(characterToDecrypt);
 		char returnChar = 'a';
 		
-		for(int i = 0; i < key.length(); i++)
-		{
-			if(lowerCase == key.charAt(i))
-			{
+		for(int i = 0; i < key.length(); i++) {
+			if(lowerCase == key.charAt(i)) {
 				returnChar = (char) (i + 'a');
-			}
-				
+			}	
 		}
 		
-		if(Character.isUpperCase(characterToDecrypt))
-		{
+		if(Character.isUpperCase(characterToDecrypt)) {
 			return Character.toUpperCase(returnChar);
-		}
-		else
-		{
+		} else {
 			return returnChar;
 		}
-		
 	}
 	
 	/**
@@ -223,39 +176,29 @@ public class Encrypter {
 	 * @param plainText - the string to be encrypted (*may assume this is not null*)
 	 * @return - an encrypted version of the input string
 	 */
-	public String encryptString(String plainText)
-	{
-		if(removeSpaces)
-		{
+	public String encryptString(String plainText) {
+		if(removeSpaces) {
 			plainText = plainText.trim();
 		}
 		
 		char letter;
 		
-		for(int i = 0; i < plainText.length(); i++)
-		{
-				letter = encryptCharacter(plainText.charAt(i));
+		for(int i = 0; i < plainText.length(); i++) {
+			letter = encryptCharacter(plainText.charAt(i));
 			
-			
-				if (removeSpaces && Character.isWhitespace(letter))
-				{
-					plainText = plainText.substring(0, i) + plainText.substring(i+1);
-				}
+			if (removeSpaces && Character.isWhitespace(letter)) {
+				plainText = plainText.substring(0, i) + plainText.substring(i+1);
+			}
 				
-				letter = encryptCharacter(plainText.charAt(i));
+			letter = encryptCharacter(plainText.charAt(i));
 				
-				if (i==0)
-				{
-					plainText = letter + plainText.substring(i+1);
-				}
-				else if (i == plainText.length()-1)
-				{
-					plainText = plainText.substring(0, i) + letter;
-				}
-				else
-				{
-					plainText = plainText.substring(0, i) + letter + plainText.substring(i+1);
-				}
+			if (i==0) {
+				plainText = letter + plainText.substring(i+1);
+			} else if (i == plainText.length()-1) {
+				plainText = plainText.substring(0, i) + letter;
+			} else {
+				plainText = plainText.substring(0, i) + letter + plainText.substring(i+1);
+			}
 		
 		}
 		return plainText; 
@@ -270,24 +213,17 @@ public class Encrypter {
 	 * @param cipherText - the string to be encrypted (*may assume this is not null*)
 	 * @return - an encrypted version of the input string
 	 */
-	public String decryptString(String cipherText)
-	{
+	public String decryptString(String cipherText) {
 		char letter;
 		
-		for(int i = 0; i < cipherText.length(); i++)
-		{
+		for(int i = 0; i < cipherText.length(); i++) {
 			letter = (char) cipherText.charAt(i);
 			
-			if(i == 0)
-			{
+			if(i == 0) {
 				cipherText = decryptCharacter(letter) + cipherText.substring(i+1);
-			}
-			else if(i == (cipherText.length()-1))
-			{
+			} else if(i == (cipherText.length()-1)) {
 				cipherText = cipherText.substring(0, i) + decryptCharacter(letter);
-			}
-			else
-			{
+			} else {
 				cipherText = cipherText.substring(0, i) + decryptCharacter(letter) + cipherText.substring(i+1);
 			}
 		}
