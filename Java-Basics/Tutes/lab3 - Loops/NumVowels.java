@@ -2,6 +2,9 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Calculates how many vowels are in a given word.
+ */
 public class NumVowels {
 
 	public static void main(String[] args) 

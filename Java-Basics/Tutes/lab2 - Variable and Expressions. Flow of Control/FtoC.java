@@ -2,6 +2,9 @@ package lab2;
 
 import java.util.Scanner;
 
+/**
+ * Converts Fahrenheit input to Celcius.
+ */
 public class FtoC {
 
 	//Converts fahrenheit to celcius.

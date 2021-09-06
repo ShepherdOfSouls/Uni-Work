@@ -2,6 +2,9 @@ package lab2;
 
 import java.util.Scanner;
 
+/**
+ * Takes a 4 digit number and prints the digits vertically.
+ */
 public class Vertical4Digits 
 {
 

@@ -2,6 +2,9 @@ package lab2;
 
 import java.util.Scanner;
 
+/**
+ * Asks the user to enter a date, prints it and then states whether it is valid, ie no month over 12 etc etc.
+ */
 public class CheckDate {
 
 	public static void main(String[] args) 

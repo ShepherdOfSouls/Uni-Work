@@ -2,6 +2,9 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Calculates how many unique handshakes there are based on how many people attend a party.
+ */
 public class HandShakes {
 
 	public static void main(String[] args) 

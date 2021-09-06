@@ -2,6 +2,9 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Sums the input numbers from the user and continues going until the user enters a negative number, the sentinel.
+ */
 public class NonNegativeSumSentinel {
 
 	public static void main(String[] args) 

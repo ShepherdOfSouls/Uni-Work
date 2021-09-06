@@ -1,5 +1,8 @@
 package lab3;
 
+/**
+ * Sums all numbers from 1 to 100 using a for loop.
+ */
 public class SumFor {
 
 	public static void main(String[] args) 

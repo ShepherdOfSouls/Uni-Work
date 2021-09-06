@@ -1,6 +1,9 @@
 package lab2;
 import java.util.Scanner;
 
+/**
+ * Takes a 4 digit number and prints its digits vertically using moduli to separate the digits.
+ */
 public class Vertical4Digits2 
 {
 

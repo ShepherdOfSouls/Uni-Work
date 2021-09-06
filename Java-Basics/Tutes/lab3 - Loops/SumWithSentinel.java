@@ -2,6 +2,9 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Sums all user input until they enter a non-double character.
+ */
 public class SumWithSentinel {
 
 	public static void main(String[] args) 

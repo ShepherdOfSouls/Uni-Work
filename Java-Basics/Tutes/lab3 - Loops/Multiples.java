@@ -2,6 +2,9 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Given two boundary numbers and a factor, the program checks whether any numbers in between the two boundaries are a multiple of the factor.
+ */
 public class Multiples {
 
 	public static void main(String[] args) {

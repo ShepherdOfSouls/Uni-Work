@@ -2,6 +2,9 @@ package lab2;
 
 import java.util.Scanner;
 
+/**
+ * Uses user input to construct a sentence.
+ */
 public class SillySentence {
 
 	public static void main(String[] args) {

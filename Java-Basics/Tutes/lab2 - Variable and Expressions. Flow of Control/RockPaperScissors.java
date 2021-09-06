@@ -2,6 +2,9 @@ package lab2;
 
 import java.util.Scanner;
 
+/**
+ * Declares a winner of rock, paper, scissors based on entered choices.
+ */
 public class RockPaperScissors 
 {
 

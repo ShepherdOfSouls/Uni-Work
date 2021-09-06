@@ -1,5 +1,8 @@
 package lab3;
 
+/**
+ * Prints and sums all numbers from 1 to 100 using a while loop.
+ */
 public class SumWhile {
 
 	public static void main(String[] args) 

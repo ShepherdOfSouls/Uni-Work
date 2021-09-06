@@ -2,10 +2,15 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Program accepts up to 3 positive numbers from the user and then applies a mathematical comparison based on the amount of numbers given.
+ * 1 number will return the factors of that number.
+ * 2 numbers will give the product and tell you which is larger.
+ * 3 numbers will state the largest of the three.
+ * User gives less than three inputs by entering a negative number or non double input.
+ */
 public class NumberCrunch {
 
-	//Not sure where this came from, it isn't in this week's lab specification. 
-	//It seems to be a program that accepts up to 3 numbers and does various mathematical operations based on the amount of numbers given.
 	public static void main(String[] args) 
 	{
 		Scanner keyboard = new Scanner(System.in);
@@ -17,8 +22,8 @@ public class NumberCrunch {
 		int num_1 = 0;
 		int num_2 = 0;
 
-		while(keyboard.hasNextInt()){
-			int temp = keyboard.nextInt();
+		while(keyboard.hasNextDouble()){
+			int temp = keyboard.nextDouble();
 			if (temp > 0){
 				num_2 = num_1;
 				num_1 = temp;

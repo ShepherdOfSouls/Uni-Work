@@ -1,5 +1,9 @@
 package lab3;
 
+/**
+ * Basic for loop that prints numbers to show how it works.
+ * First number is outer loop iteration and second number is inner loop.
+ */
 public class NestedLoops {
 
 	public static void main(String[] args) 

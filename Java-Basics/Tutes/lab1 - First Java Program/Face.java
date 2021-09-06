@@ -1,5 +1,8 @@
 package lab1;
 
+/**
+ * Prints a face using print statements.
+ */
 public class Face {
 
 	public static void main(String[] args) {

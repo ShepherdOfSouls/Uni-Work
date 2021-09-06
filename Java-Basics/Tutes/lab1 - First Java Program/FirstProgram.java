@@ -2,6 +2,9 @@ package lab1;
 
 import java.util.Scanner;
 
+/**
+ * Takes three numbers from user input and adds them together.
+ */
 public class FirstProgram {
 
 	public static void main(String[] args) {
