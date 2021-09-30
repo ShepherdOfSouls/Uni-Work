@@ -8,7 +8,7 @@ The spheres must:
 * Work without latency for up to 10 balls at once.
 \
 \
-TODOs
+TODOs:
 * Make gravity/air friction more realistic, bit spacey. Possibly use "https://en.wikipedia.org/wiki/Equations_of_motion"
 * Make ball skins move based on collisions.
 * Make ball collision rebound velocity affected by the other ball, not just the speed of itself.
