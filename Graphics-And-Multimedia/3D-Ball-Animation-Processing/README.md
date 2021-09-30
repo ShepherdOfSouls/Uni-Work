@@ -6,7 +6,8 @@ The spheres must:
 * Bounce semi-realistically off walls and other spheres, this includes direction a speed changes.
 * Balls must constantly be affected by gravity and speed must decay according to time and bounces.
 * Work without latency for up to 10 balls at once.
-&NewLine;
+\
+\
 TODOs
 * Make gravity/air friction more realistic, bit spacey. Possibly use "https://en.wikipedia.org/wiki/Equations_of_motion"
 * Make ball skins move based on collisions.
